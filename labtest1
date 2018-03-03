@@ -1,0 +1,78 @@
+cs2016a106@user:~$ cd aryan
+cs2016a106@user:~/aryan$ cat > test
+this is my unix lab
+unix and shell programming lab
+cs2016a106@user:~/aryan$ cat > test
+this is my unix lab
+unix and shell programming lab
+cs2016a106@user:~/aryan$  grep -i
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+cs2016a106@user:~/aryan$ grep -v "Unix" test
+this is my unix lab
+unix and shell programming lab
+cs2016a106@user:~/aryan$  grep -c "Unix" test
+0
+cs2016a106@user:~/aryan$ grep -n "Unix" test
+cs2016a106@user:~/aryan$ grep "unix|Unix" test
+cs2016a106@user:~/aryan$ grep "[unix|Unix]" test
+this is my unix lab
+unix and shell programming lab
+cs2016a106@user:~/aryan$ man grep
+cs2016a106@user:~/aryan$ ls -l|grep
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+cs2016a106@user:~/aryan$ a*
+aryan: command not found
+cs2016a106@user:~/aryan$ grep -e "Unix" test
+cs2016a106@user:~/aryan$ grep -E "Unix" test
+cs2016a106@user:~/aryan$ cat > test1
+i am agarwal
+he has a friend agarwal
+he has a cousin agarwal
+cs2016a106@user:~/aryan$ cat > test1
+i am Aggarwal
+he has a friend agarwal
+he has a cousin Agrawal
+cs2016a106@user:~/aryan$ [Aa]g[gg*][ar][ra]wal
+[Aa]g[gg*][ar][ra]wal: command not found
+cs2016a106@user:~/aryan$ grep [Aa]g[gg*][ar][ra]wal test1
+i am Aggarwal
+cs2016a106@user:~/aryan$ grep -E [Aa]g[gg*][ar][ra]wal test1
+i am Aggarwal
+cs2016a106@user:~/aryan$ man grep
+cs2016a106@user:~/aryan$ grep -G [Aa]g[gg*][ar][ra]wal test1
+i am Aggarwal
+cs2016a106@user:~/aryan$ man grep
+cs2016a106@user:~/aryan$ grep -P [Aa]g[gg*][ar][ra]wal test1
+i am Aggarwal
+cs2016a106@user:~/aryan$ man grep
+cs2016a106@user:~/aryan$ grep -i [Aa]g[gg*][ar][ra]wal test1
+i am Aggarwal
+cs2016a106@user:~/aryan$ man grep
+cs2016a106@user:~/aryan$ grep -X [Aa]g[gg*][ar][ra]wal test1
+grep: invalid matcher [Aa]g[gg*][ar][ra]wal
+cs2016a106@user:~/aryan$ man grep
+cs2016a106@user:~/aryan$ grep -x [Aa]g[gg*][ar][ra]wal test1
+cs2016a106@user:~/aryan$ man grep
+cs2016a106@user:~/aryan$ grep -v [Aa]g[gg*][ar][ra]wal test1
+he has a friend agarwal
+he has a cousin Agrawal
+cs2016a106@user:~/aryan$ man grep
+cs2016a106@user:~/aryan$ grep -m NUM [Aa]g[gg*][ar][ra]wal test1
+grep: invalid max count
+cs2016a106@user:~/aryan$ man grep
+cs2016a106@user:~/aryan$ grep -w ^C
+cs2016a106@user:~/aryan$ grep -w [Aa]g[gg*][ar][ra]wal test1
+i am Aggarwal
+cs2016a106@user:~/aryan$ man grep
+cs2016a106@user:~/aryan$ grep --colour[=WHEN]  [Aa]g[gg*][ar][ra]wal test1
+grep: unrecognized option '--colour[=WHEN]'
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+cs2016a106@user:~/aryan$ grep -y  [Aa]g[gg*][ar][ra]wal test1
+i am Aggarwal
+cs2016a106@user:~/aryan$ 
+i am Aggarwal
+he has a friend agarwal
+he has a cousin Agrawal
